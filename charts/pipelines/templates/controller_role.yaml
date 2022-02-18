@@ -15,6 +15,7 @@ rules:
       - namespaces
       - pods
       - serviceaccounts
+      - secrets
     verbs:
       - get
       - list
