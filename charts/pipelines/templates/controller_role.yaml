@@ -10,12 +10,7 @@ metadata:
 rules:
   - apiGroups:
       - ''
-    resources:
-      - configmaps
-      - namespaces
-      - pods
-      - serviceaccounts
-      - secrets
+    resources: ["*"]
     verbs:
       - get
       - list
