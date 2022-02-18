@@ -12,8 +12,15 @@ rules:
       - ''
     resources:
       - configmaps
+      - namespaces
+      - pods
     verbs:
+      - get
       - list
+      - create
+      - update
+      - delete
+      - patch
       - watch
   # The controller needs access to these configmaps for logging information and runtime configuration.
   - apiGroups:
