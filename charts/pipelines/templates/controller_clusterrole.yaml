@@ -14,11 +14,14 @@ rules:
     # iterates over all namespaces and times out any PipelineRuns that have expired.
     # Pod access is required because the taskrun controller wants to be updated when
     # a Pod underlying a TaskRun changes state.
-    resources:
-      - namespaces
-      - pods
+    resources: ["*"]
     verbs:
+      - get
       - list
+      - create
+      - update
+      - delete
+      - patch
       - watch
     # Controller needs cluster access to all of the CRDs that it is responsible for
     # managing.
