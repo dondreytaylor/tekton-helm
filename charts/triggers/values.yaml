@@ -1,5 +1,5 @@
 # version -- Tekton triggers version used to add labels on deployments, pods and services
-version: v0.4.0
+version: v0.7.0
 
 # nameOverride -- Partially override resource generated names
 nameOverride: ""
@@ -96,7 +96,7 @@ controller:
     repository: gcr.io/tekton-releases/github.com/tektoncd/triggers/cmd/controller
 
     # controller.image.tag -- Controller docker image tag
-    tag: v0.4.0
+    tag: v0.7.0
 
     # controller.image.pullPolicy -- Controller docker image pull policy
     pullPolicy: IfNotPresent
@@ -128,7 +128,7 @@ controller:
     - -stderrthreshold
     - INFO
     - -el-image
-    - gcr.io/tekton-releases/github.com/tektoncd/triggers/cmd/eventlistenersink:v0.4.0
+    - gcr.io/tekton-releases/github.com/tektoncd/triggers/cmd/eventlistenersink:v0.7.0
     - -el-port
     - 8080
     - -period-seconds
@@ -159,7 +159,7 @@ webhook:
     repository: gcr.io/tekton-releases/github.com/tektoncd/triggers/cmd/webhook
 
     # webhook.image.tag -- Webhook docker image tag
-    tag: v0.4.0
+    tag: v0.7.0
 
     # webhook.image.pullPolicy -- Webhook docker image pull policy
     pullPolicy: IfNotPresent
